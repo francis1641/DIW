@@ -1,0 +1,101 @@
+body {
+    color: white;
+    font-family: arial;
+    background-color: orange;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+
+}
+
+button {
+    border-radius: 12px;
+}
+
+
+/*Móvil*/
+
+@media screen and (max-width: 568px) {
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+    input {
+        order: 1;
+        flex-basis: 80px;
+    }
+    button {
+        order: 1;
+        flex-basis: 20px;
+    }
+
+    a {
+        order: 3;
+        flex-basis: 100px;
+        text-align: center;
+        line-height: 2.0;
+    }
+}
+
+/*Tablet*/
+
+@media screen and (max-width: 768px) and (min-width: 568px) {
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    input {
+        order: 2;
+        flex-basis: 80px;
+    }
+    button {
+        order: 2;
+        flex-basis: 20%;
+    }
+
+    a {
+        order: 1;
+        flex-basis: 120px;
+        text-align: center;
+        line-height: 2.0;
+    }
+
+
+}
+
+
+/*Escritorio*/
+
+@media screen and (min-width: 768px) {
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+    input {
+        flex-basis: 25%;
+        margin-left: 10% ;
+
+    }
+
+    button {
+        flex-basis: 5%;
+    }
+
+    a {
+        flex-basis: 15%;
+        text-align: left;
+    }
+
+}
