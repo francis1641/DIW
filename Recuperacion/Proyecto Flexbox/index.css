@@ -2,12 +2,17 @@ aside{
     display: flex;
     flex-direction: column-reverse;
     list-style-type: none;
-    margin: 0;
+    /*margin: 0;
     padding: 0;
     width: 10%;
     height: 99%;
-    position: fixed;
+    position: fixed;*/
+    position: sticky;
+    top: 0;
+    left:0;
+    height: 99vh;
 }
+
 
 .logoimage{
     margin-bottom: auto;
