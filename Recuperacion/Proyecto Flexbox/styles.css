@@ -311,3 +311,41 @@ div.work__card img:hover,
 div.work__card img:active {
   filter: sepia(80%);
 }
+
+section#about-me{
+    display: flex;
+    /*flex-wrap: wrap;*/
+    justify-content: center; 
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 2rem;
+}
+
+div.about-me__img{
+  padding: 3rem;
+  flex-basis: 40rem; /* esto es aproximadamente la mitad de un desktop*/
+  /*flex-basis:50%;*/
+  /*flex-basis:400px; esto es lo mismo con px*/
+  flex-grow: 1; /* elemento configurado para crecer*/
+}
+
+div.about-me__content{
+  font-size: 2.5rem;
+}
+
+div.about-me__content a{
+  /*padding-top: 1rem;*/
+  font-size: 2.5rem;
+}
+
+div.about-me__content h2{
+  font-size: 6rem;
+  color: white;
+  content: "";
+  left: 0%;
+  bottom: 0;
+  width: 5%;
+  height: 0.5rem;
+  background-color: var(--tertiary-color);
+}
+
