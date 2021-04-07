@@ -315,18 +315,21 @@ div.work__card img:active {
 section#about-me{
     display: flex;
     /*flex-wrap: wrap;*/
-    justify-content: center; 
+    justify-content: space-around; 
     align-items: center;
     background-color: var(--secondary-color);
     padding: 2rem;
 }
 
 div.about-me__img{
-  padding: 3rem;
+  padding: 2rem;
   flex-basis: 40rem; /* esto es aproximadamente la mitad de un desktop*/
   /*flex-basis:50%;*/
   /*flex-basis:400px; esto es lo mismo con px*/
   flex-grow: 1; /* elemento configurado para crecer*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 div.about-me__content{
@@ -338,14 +341,161 @@ div.about-me__content a{
   font-size: 2.5rem;
 }
 
-div.about-me__content h2{
+.about-me__content--title{
   font-size: 6rem;
+  padding: 1rem 0;
   color: white;
+  position: relative;
+}
+
+.about-me__content--title:after{
   content: "";
-  left: 0%;
+  position: absolute;
+  left: 0;
   bottom: 0;
-  width: 5%;
+  width: 10%;
   height: 0.5rem;
+  background-color: var(--primary-color);
+}
+.about-me__content--title,
+.about-me__content--para{
+  margin-bottom: 4rem;
+  letter-spacing: 0.2rem;
+}
+
+.about-me__content--para{
+  font-size: 1.8rem;
+  font-family: "indie Flower", cursive;
+}
+
+.about-me__content--link:link,
+.about-me__content--link:visited{
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+
+  position: relative;
+  z-index: 1;
+}
+
+.about-me__content--link:link::after,
+.about-me__content--link:visited::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  z-index: -1;
+}
+
+.about-me__content--link:hover::after,
+.about-me__content--link:active::after{
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+
+section#services{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 6rem 2rem 2rem;
   background-color: var(--tertiary-color);
+}
+.service{
+  padding: 2rem;
+  margin: 0 2rem 4rem;
+  flex-basis: 40rem;
+  flex-grow: 1;
+  background-color: var(--secondary-color);
+  border-top: 0.2rem solid var(--secondary-color);
+  border-bottom: 0.2rem solid var(--secondary-color);
+  border-right: 0.2rem solid var(--secondary-color);
+  border-left: 0.2rem solid var(--secondary-color);
+
+  position: relative;
+  z-index: 1;
+}
+
+.service::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 0.45s cubic-bezier(1,0,0,1);
+
+  z-index: -1;
+}
+
+.service:hover::after,
+.service:active::after{
+  transform: scaleX(1);
+}
+
+.service i,
+.services--title{
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+section#skills{
+
+}
+
+.skill.design,
+.skill.coding{
+ padding: calc(1rem+2vw);
+ padding: 1rem;
+ flex-basis: 40rem;
+  flex-grow: 1;
+}
+.skill__design--title,
+.skill__coding-title{
+  font-size: 3rem;
+  color: white;
+}
+
+.skill__design h4,
+.skill__coding h4{
+  font-size: 3rem;
+  color: white;
+}
+
+.skill__design--progress,
+.skill.coding--progress{
+  position: relative;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 3rem;
+  background-color: var(--primary-color);
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.skill__design--progress span,
+.skill__coding--progress span{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 2rem;
+  border-radius: 1rem 0 0 1rem;
+  background-color: var(--secondary-color);
+}
+
+.skills_design--progress__1{
+  
 }
 
