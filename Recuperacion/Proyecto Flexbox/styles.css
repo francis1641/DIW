@@ -452,30 +452,39 @@ section#services{
 }
 
 section#skills{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 
+  padding: calc(1rem+2vw);  
+  padding: 2rem;
+  background-color: var(--tertiary-color);
 }
 
-.skill.design,
-.skill.coding{
+.skills__design,
+.skills__coding {
  padding: calc(1rem+2vw);
  padding: 1rem;
  flex-basis: 40rem;
   flex-grow: 1;
 }
-.skill__design--title,
-.skill__coding-title{
+.skills__design--title,
+.skills__coding--title{
   font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  /*color: white;*/
+}
+
+.skills__design h4,
+.skills__coding h4{
+  font-size: 2rem;
   color: white;
 }
 
-.skill__design h4,
-.skill__coding h4{
-  font-size: 3rem;
-  color: white;
-}
-
-.skill__design--progress,
-.skill.coding--progress{
+.skills__design--progress,
+.skills__coding--progress{
   position: relative;
   display: block;
   padding: 0.5rem;
@@ -485,8 +494,8 @@ section#skills{
   margin-bottom: 2rem;
 }
 
-.skill__design--progress span,
-.skill__coding--progress span{
+.skills__design--progress span,
+.skills__coding--progress span{
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -495,7 +504,115 @@ section#skills{
   background-color: var(--secondary-color);
 }
 
-.skills_design--progress__1{
-  
+.skills__design--progress__1{
+  width: 80%;
+  animation: design-1 4s infinite cubic-bezier(1, 0, 0, 1);
 }
 
+@keyframes design-1 {
+  0%{
+    /* Quiero que empiece desde 0*/
+    width: 0;
+  }
+  100%{
+    /* Hasta donde quiero que llege la barra*/
+    width: 80%;
+  }
+}
+
+.skills__design--progress__2{
+  width: 80%;
+  animation: design-2 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes design-2 {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 75%;
+  }
+}
+
+.skills__design--progress__3{
+  width: 80%;
+  animation: design-3 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes design-3 {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 60%;
+  }
+}
+
+.skills__design--progress__4{
+  width: 80%;
+  animation: design-4 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes design-4 {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 90%;
+  }
+}
+
+.skills__coding--progress__1{
+  width: 80%;
+  animation: coding-1 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes coding-1 {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 95%;
+  }
+}
+
+.skills__coding--progress__2{
+  width: 80%;
+  animation: coding-2 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes coding-2 {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 90%;
+  }
+}
+
+.skills__coding--progress__3{
+  width: 80%;
+  animation: coding-3 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes coding-3 {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 75%;
+  }
+}
+
+.skills__coding--progress__4{
+  animation: coding-4 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes coding-4 {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 80%;
+  }
+}
