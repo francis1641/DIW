@@ -752,3 +752,19 @@ nav#header__main-nav {
 .clicked{
   left: 55%;
 }
+
+
+.header__main-nav--hamburger{
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  top: 2rem;
+  right: 3rem;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
