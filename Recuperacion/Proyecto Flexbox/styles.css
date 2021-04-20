@@ -744,4 +744,11 @@ nav#header__main-nav {
   top: 0;
   right: -30rem;/*porque no quuero que sea visible ahora*/
   background-color: var(--secondary-color);
+  text-align: center;
+  left: 55%
+
+}
+
+.clicked{
+  left: 55%;
 }
