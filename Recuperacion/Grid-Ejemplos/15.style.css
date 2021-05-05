@@ -1,0 +1,81 @@
+.grid-1{
+    display: grid;
+/* minmax con unidades absolutas*/
+/*el ancho de la celda amarilla oscila entre 100px y 400ps 
+dependiendo del ancho de la vista*/ 
+    grid-template-columns: minmax(100px,400px) 1fr 1fr;
+    gap: 1rem;
+}
+
+.grid-2{
+    display: grid;
+   /* width: 50vw;*/
+    
+/* con porcentaje: la celda amarilla ocupa como máximo el 50%
+de la cuadrícula pero no menos de 200px*/
+    grid-template-columns: minmax(200px, 50%) 1fr 1fr;
+    gap: 1rem;
+}
+
+.grid-3{
+    display: grid;
+       
+/* con fr: */  
+/* solo puede ser usada como valor máximo, actualmente*/
+/* en el ejemplo la celda amarilla en vistas pequeñas tendrá un ancho de 200px*/
+/*en vistas grandes será 1fr igual q las otras dos*/
+
+    grid-template-columns: minmax(200px, 1fr) 1fr 1fr;
+    gap: 1rem;
+}
+
+.grid-4{
+    display: grid;
+       
+/* con max-content */
+/*Este es el tamaño más pequeño posible que puede tener la celda, 
+sin dejar de ajustarse a su contenido de manera discreta.
+Por ejemplo, si el contenido de la celda es una oración, el ancho ideal para la ce
+longitud de la oración, independientemente de la longitud y sin saltos de línea.*/
+
+    grid-template-columns: minmax(max-content, max-content) 1fr 1fr;
+    gap: 1rem;
+}
+
+.grid-5{
+    display: grid;
+       
+/* con min-content */
+/*Representa el tamaño más pequeño posible que puede tener la ce
+no conduce a un desbordamiento, a menos que ese desbordamiento sea inevitable.*/
+
+    grid-template-columns: minmax(min-content, min-content) 1fr 1fr;
+    gap: 1rem;
+}
+
+.grid-6{
+    display: grid;
+       
+/* con auto */
+/*tiene diferentes significados 
+dependiendo de si se usa como valor máximo o mínimo en la función minmax ().*/
+/* como máximo: el valor automático es equivalente al valor de contenido máximo*/
+/* como mínimo: representa el tamaño mínimo más grande que puede tener la celda
+esto es min-width/min-height*/
+
+    grid-template-columns: minmax(auto, auto) 1fr 1fr;
+    gap: 1rem;
+}
+
+
+
+.item{
+    font-size: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    background-color: lightskyblue;
+}
+.item-1{
+    background-color: yellow;
+}

@@ -1,0 +1,18 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+.item{
+  background-color: lightsteelblue;
+  font-size: 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 3px;
+}
+/* repeat(): nos permite especificar el mismo valor para múltiples columnas 
+   en la cuadrícula. 
+   Acepta dos valores: el número de veces que se repetirá y el valor que se repetirá.*/
+/*auto-fit: Lo utilizamos con repeat() para cambiarde manera flexible 
+el número de columnas que se utilizan en función del ancho que puede 
+tener cada columna.*/
