@@ -30,6 +30,7 @@ body {
     display: grid;
  /*   grid-template-rows: repeat(8, 1fr);*/
     grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
 }
 
 .grid-container>.header, .grid-container>.content, .grid-container>.sidebar, .grid-container>.footer, .container>div {
@@ -79,8 +80,15 @@ body {
 }
 
 .grid-container>.related-post {
+   height: 12rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #0000007c;
+   color: white;
    
 }
+
 
 
 
@@ -88,4 +96,19 @@ body {
 
 @media screen and (max-width: 768px) {
    /*solo tienes que colocar de nuevo los items*/
+   .grid-container .content{
+       grid-column: 1/ -1;
+   }
+
+   .grid-container .sidebar{
+    grid-column: 1/ -1;
+   }
+
+   .grid-container .article{
+    grid-column: 1/ -1;
+   }
+   
+   .grid-container .related-post{
+    grid-column: 1/ -1;
+   }
 }

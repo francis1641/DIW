@@ -1,0 +1,153 @@
+/*Google font*/
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,900|Six+Caps');
+
+
+/* ===== Variables ===== */
+:root{
+/*Fonts */
+--ff-base: 'Merriweather', serif;
+--ff-alt: 'Six Caps', sans-serif;
+
+
+/*sizes*/
+--fs-base: 1rem;
+--fs-h1: 3.75rem;
+--fs-h2: 2.875rem;
+--fs-h3: 2.25rem;
+--fs-xl: 6rem;
+
+/* Colours*/
+--black: #252525;
+--yellow: #e9d20f;
+--light-gray: #c2c2c2;
+--dark-gray: #e8e8e8;
+--white: #fff;
+
+}
+
+
+/* ===== Styles ===== */
+
+body {
+/*para todos*/
+  font-family: var(--ff-base);
+  font-weight: 300;
+  font-size: var(--fs-base);
+  color:var(--black);
+  line-height: 1.8;
+ 
+  /*definimos el grid*/
+  display: grid;
+  grid-template-rows:10rem 50vh auto 10rem;
+ /* grid-template-columns:1fr 4fr 2fr 1fr */
+ /* grid-template-areas: header header header header
+                          hero hero hero hero
+                          . main sidebar .
+                          footer footer footer footer
+                          LLAMAR A SUS HIJOS IGUAL*/ 
+   
+  
+
+  grid-column-gap: 1.5rem;
+}
+
+header {
+  grid-area: header;
+}
+
+/*mismos estilos header y footer*/
+header,
+footer {
+  background: var(--black);
+  color: var(--yellow);
+  
+}
+
+.header-title,
+.footer-title {
+  font-family: var(--ff-alt);
+  font-size:calc(1.25rem + 2.1112vw);
+  color:var(--yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+.hero {
+  
+  background: url(../img/bg.jpg);
+  
+}
+
+.hero .hero-title {
+ 
+  letter-spacing: 0.3em;
+  margin: 0;
+}
+
+.hero .hero-subtitle {
+  font-weight: 300;
+  line-height: 1.6;
+  color:var(--white);
+  font-size: var(--fs-h2);
+  font-size:calc(1rem + 1.66667vw);
+  margin: 0;
+}
+
+main {
+  
+}
+
+aside {
+  grid-area: sidebar;
+  background: var(--dark-gray);
+  padding: 2em;
+}
+
+footer {
+  
+}
+
+
+
+/*Cards*/
+
+.card {
+  display: grid;
+  
+  grid-column-gap: 1.5em;
+ /* box-shadow: 
+  padding: 
+  margin-bottom: */
+}
+
+.card-img {
+
+  max-width: 100%;
+}
+
+.card-title {
+  
+  margin: 0;
+  font-weight: 300;
+}
+
+.card-content {
+  
+  
+ }
+
+.card-content a {
+    color: var(--yellow);
+    font-size: 1.1em;
+}
+/*aquí añade pseudoclases como hover y active para el enlace*/
+
+/*media queries*/
+@media screen and (max-width: 768px) {
+body{
+ /* grid-template-rows:
+  grid-template-areas: */
+    
+}
+
+}
