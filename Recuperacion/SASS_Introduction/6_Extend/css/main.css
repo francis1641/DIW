@@ -1,0 +1,27 @@
+@charset "UTF-8";
+.nav {
+  background-color: orange; }
+  .nav ul li {
+    list-style: none; }
+  .nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: gray; }
+    .nav a:hover {
+      color: royalblue; }
+
+.heading, h1, .footer h3 {
+  color: orange;
+  font-size: 40px;
+  background-color: gray;
+  text-align: center; }
+
+/*directiva extend: permite reutilizar estilos, es decir, 
+podemos construir estilos de unos componentes usando los estilos de otros*/
+h1, .footer h3 {
+  /* h1 tiene el mismo diseño que .heading. Reutilizo con @extend*/ }
+  h1:hover, .footer h3:hover {
+    background-color: green; }
+
+.footer h3 {
+  /*aquí reutilizo todo h1, con su hover y todo*/ }

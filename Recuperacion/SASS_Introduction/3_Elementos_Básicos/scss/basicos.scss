@@ -1,0 +1,136 @@
+// Variables de colores
+//variables globales. Disponibles en todo el documento
+$grey: #bbbbbb;
+$header-background : $grey;
+$link-normal: #000;
+$link-hover: #f00;
+$link-visited: #00f;
+$link-active: #0f0;
+
+.header {
+    //variable local
+    //disponible donde ha sido declarada
+    $header-background : lightblue;
+    background-color: $header-background;
+}
+.footer{
+    background-color: $header-background;
+}
+
+//comentario de una sola línea
+/*comentario
+de varias
+líneas*/ 
+
+//listas
+//colección de valores. Se accede por índice, primer elemento = 1
+$sizes:(40px, 80px, 160px);
+
+//uso listas
+//acceder a un elemento de la lista
+//nth: función q devuelve un valor de una lista
+//nth(nombre_lista, índice)
+.banner {
+    h1{
+        font-size: nth($sizes,2);
+    }
+}
+
+//mapas
+//colección de valores. Se accede por clave
+
+$breakpoints:(
+    "sm": 576,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px
+);
+
+//escala de grises
+$greyscale:(
+      "100": #EEF1F4,
+      "200": #DFE3E7,
+      "300": #CBCFD2,
+      "400": #B3B6B9,
+      "500": #9CA0A3,
+      "600": #7C7F82,
+      "700": #606365,
+      "800": #4A4C4F,
+      "900": #333536,
+);
+
+/* para acceder a los valores del mapa usamos la 
+función map-get*/
+.banner{
+    background-color: map-get($greyscale, "200" );
+}
+// Interpolación en selectores
+/*permiten crear variables cuyo contenido puede ser evaluado en tiempo real 
+para poder referenciar propiedades CSS o selectores de una forma mucho más flexible
+*/
+$button-type: "error";
+$btn-color : #f00;
+button{
+    background-color: $btn-color;
+}
+
+
+
+/* btn-error
+   btn-warning
+   btn-info*/
+ 
+.#{$button-type}  {
+    background-color: $btn-color;
+} 
+
+.btn-#{$button-type} { //voy a crear un nuevo selector
+    background-color:  $btn-color;
+}
+
+$button-type: ("error", "warning", "infor");
+$btn-color : (red, yellow, blue);
+
+.btn-#{nth($button-type,1)} {
+    background-color:  nth($btn-color,1);
+}
+.btn-#{nth($button-type,2)} {
+    background-color:  nth($btn-color,2);
+}
+.btn-#{nth($button-type,3)} {
+    background-color:  nth($btn-color,3);
+}
+
+
+//Interpolación en el uso de funciones
+$fondo :"../img/image1.jpg";
+
+.container {
+  
+  background-image: url('#{$fondo}');
+  
+}
+
+//Interpolación en comentarios
+$autor: "DAW";
+
+/* 
+    Web desarrollada por #{$autor}
+*/
+
+//Anidamiento básico para enlaces
+a {
+    color: $link-normal;
+    text-decoration: none;
+    &:hover {
+        color: $link-hover;
+    }
+    &:visited {
+        color: $link-visited;
+    }
+    &:active {
+        color: $link-active;
+    }
+}
+
+

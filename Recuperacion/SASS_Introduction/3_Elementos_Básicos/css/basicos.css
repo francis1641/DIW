@@ -1,0 +1,57 @@
+@charset "UTF-8";
+.header {
+  background-color: lightblue; }
+
+.footer {
+  background-color: #bbbbbb; }
+
+/*comentario
+de varias
+líneas*/
+.banner h1 {
+  font-size: 80px; }
+
+/* para acceder a los valores del mapa usamos la 
+función map-get*/
+.banner {
+  background-color: #DFE3E7; }
+
+/*permiten crear variables cuyo contenido puede ser evaluado en tiempo real 
+para poder referenciar propiedades CSS o selectores de una forma mucho más flexible
+*/
+button {
+  background-color: #f00; }
+
+/* btn-error
+   btn-warning
+   btn-info*/
+.error {
+  background-color: #f00; }
+
+.btn-error {
+  background-color: #f00; }
+
+.btn-error {
+  background-color: red; }
+
+.btn-warning {
+  background-color: yellow; }
+
+.btn-infor {
+  background-color: blue; }
+
+.container {
+  background-image: url("../img/image1.jpg"); }
+
+/* 
+    Web desarrollada por DAW
+*/
+a {
+  color: #000;
+  text-decoration: none; }
+  a:hover {
+    color: #f00; }
+  a:visited {
+    color: #00f; }
+  a:active {
+    color: #0f0; }

@@ -1,0 +1,92 @@
+$color-primary: rgb(248, 224, 180);
+$color-secondary: gray;
+$color-tertiary: red;
+$color-quaternary:green;
+
+$font-lg: 40px;
+$font-md: 30px;
+$font-sm: 20px;
+
+.nav{
+    background-color: $color-primary;
+    ul li{
+        list-style-type: none;
+        a{
+            text-decoration: none;
+        }
+    }
+}
+
+.nav {
+    background-color: $color-primary;
+    ul li {
+        list-style: none;
+    
+     
+    a {
+        text-decoration: none;
+        font-size: $font-sm;
+        color: $color-secondary;
+        
+        &:hover {
+            color: $color-tertiary;
+        }
+        &:active {
+            color: $color-quaternary;
+        }
+                
+
+    }
+   }
+}
+
+.banner{
+    background-color: $color-primary;
+    h1 {
+        font-size: $font_lg;
+        color: $color-secondary;
+        text-align: center;
+    }
+}
+
+.footer {
+    background-color: $color-primary;
+    &-h3 {
+        font-size: $font-md;
+        color: $color-secondary;
+        text-align: center;
+    }
+    &-p{
+        font-size: $font-sm;
+        color:$color-tertiary;
+        letter-spacing: 0.2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

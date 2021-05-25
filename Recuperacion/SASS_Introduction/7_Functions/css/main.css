@@ -1,0 +1,42 @@
+@charset "UTF-8";
+.nav {
+  background-color: #00731a; }
+  .nav ul li {
+    list-style: none; }
+  .nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: gray; }
+    .nav a:hover {
+      color: royalblue; }
+
+.heading, h1, .footer h3 {
+  color: orange;
+  font-size: 40px;
+  text-align: center; }
+
+/*Funciones: parecedias a los mixin.
+pueden acceder a variables globales y aceptar argumentos
+directiva q usa @function 
+seguida del nombre de la función, 
+entre paréntesis podremos pasar los argumentos que necesite nuestra función. 
+Además, al terminar de crear nuestra función, es necesario utilizar 
+la directiva @return seguido de lo que devuelve después de su ejecución.*/
+h1:hover, .footer h3:hover {
+  background-color: #01ff01; }
+
+.uno {
+  width: 250px;
+  background-color: orange;
+  text-align: center; }
+
+.dos {
+  width: 300px;
+  background-color: aqua;
+  text-align: center; }
+
+.banner p {
+  font-size: 40px; }
+
+.footer p {
+  font-size: 60px; }

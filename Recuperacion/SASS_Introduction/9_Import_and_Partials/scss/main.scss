@@ -1,0 +1,67 @@
+@import "variables";
+@import "test";
+/*a capacidad de importar tanto hojas de estilo CSS como hojas de Sass/CSS, 
+permitiendo así el acceso a mixins, funciones y variables de dichas hojas y
+ la combinación de todas ellas en una sola.*/ 
+/*Sass/SCSS realiza toda la importación durante la compilación*/ 
+
+
+.nav {
+    background-color: 
+        mix(blue, green, 10%);
+    
+    ul li {
+        list-style: none;
+    }
+     
+    a {
+        text-decoration: none;
+        font-size: $font-sm;
+        color: $color-secondary;
+        
+        &:hover {
+            color: $color-tertiary;
+        }
+    }
+}
+
+
+
+h1 {
+    @extend %heading;
+    
+    &:hover {
+        background-color: green;
+    }
+}
+
+.footer h3 {
+    @extend h1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

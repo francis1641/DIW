@@ -1,0 +1,30 @@
+@charset "UTF-8";
+h1, .footer h3 {
+  color: orange;
+  font-size: 40px;
+  background-color: gray;
+  text-align: center; }
+
+/*partian: fichero pensado para ser importado y no compilado*/
+/*su nombre comienza por _ */
+.footer h3 {
+  font-style: italic;
+  border: 3px solid red; }
+
+/*a capacidad de importar tanto hojas de estilo CSS como hojas de Sass/CSS, 
+permitiendo así el acceso a mixins, funciones y variables de dichas hojas y
+ la combinación de todas ellas en una sola.*/
+/*Sass/SCSS realiza toda la importación durante la compilación*/
+.nav {
+  background-color: #00731a; }
+  .nav ul li {
+    list-style: none; }
+  .nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: gray; }
+    .nav a:hover {
+      color: royalblue; }
+
+h1:hover, .footer h3:hover {
+  background-color: green; }
